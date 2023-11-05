@@ -35,34 +35,22 @@ menuItem.forEach (function(menuItem) {
 })
 
 
+// Get the button
+let mybutton = document.getElementById("myBtn");
 
-myButton.addEventListener("click", function () {
-  myPopup.classList.add("show");
-});
-closePopup.addEventListener("click", function () {
-  myPopup.classList.remove("show");
-});
-window.addEventListener("click", function (event) {
-  if (event.target == myPopup) {
-      myPopup.classList.remove("show");
-  }
-})
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-$(function(){
-  $('#div1').click(function(){
-  if($(this).hasClass("che0")){
-      $(this).toggleClass("che1");
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
-  else{
-      $(this).toggleClass("che1");
-  }
-});
-});
+}
 
-$(document).ready(function () {
-  $('.bar').hover(function () {
-    $('.bar').addClass('hovered');
-  }, function () {
-    $('.bar').removeClass('hovered');
-  });
-});
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
