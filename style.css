@@ -44,7 +44,7 @@ body {
 
 .main__block_texts {
   width: 80%;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,6 +249,10 @@ body {
   font-weight: 600;
 }
 
+a {
+  letter-spacing: 2px;
+}
+
 .last__mag_block {
   width: 100%;
   height: 284px;
@@ -301,6 +305,11 @@ body {
   background-image: url("./Img/012.png");
 }
 
+.header__nav {
+  position: fixed;
+  z-index: 5;
+}
+
 /* Гамбургер иконка */
 .menu-btn {
   margin-top: 3.5px;
@@ -315,6 +324,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 6;
 }
 
 .main__svg {
@@ -381,6 +391,7 @@ body {
   background-color: #000;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  z-index: 6;
 }
 
 .menu-btn .bar:nth-of-type(2) {
@@ -494,6 +505,9 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
+  }
+  a {
+    letter-spacing: 2px;
   }
   .header {
     display: flex;
@@ -731,16 +745,12 @@ body {
   }
   .footer__image {
     width: 100%;
-    height: 300px;
-    margin-bottom: -200px;
+    height: 500px;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 400px;
+    min-height: 500px;
     background-image: url("./Img/012.png");
-    background-attachment: fixed;
-    background-position: -450px 300px;
     background-size: auto;
   }
   /* Гамбургер иконка */
